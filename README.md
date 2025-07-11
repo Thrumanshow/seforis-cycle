@@ -64,12 +64,17 @@ Un modelo de exploración basado en la conexión entre inteligencia artificial, 
 | `GitHub Actions` | ⚙️ Sincronizado |
 
 ---
-Bash```
+
+### 🔄 Cómo publicar un nuevo release (manual)
+
+```bash
 git add README.md
 git commit -m "docs: actualización del README con versión 1.0.1"
 git tag v1.0.1
 git push origin main
 git push origin v1.0.1
 ```
+
+---
 
 ### © 2025 · HormigasAIS · Diseñado y coordinado por [Cristhiam Quiñonez](https://medium.com/@hormigasaiscristhiamquinonez)
