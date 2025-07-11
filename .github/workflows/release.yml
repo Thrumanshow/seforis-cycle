@@ -1,0 +1,28 @@
+name: 🚀 Publicar Release SEFORIS-CYCLE
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔄 Checkout del repositorio
+        uses: actions/checkout@v3
+
+      - name: 🧠 Setup Node.js (opcional si hay frontend)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: 📦 Crear release automáticamente
+        uses: softprops/action-gh-release@v1
+        with:
+          name: SEFORIS-CYCLE ${{ github.ref_name }}
+          tag_name: ${{ github.ref_name }}
+          body_path: .github/release-notes.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
