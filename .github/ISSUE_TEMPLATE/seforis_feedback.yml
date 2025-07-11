@@ -1,0 +1,43 @@
+name: 🧭 SEFORIS Feedback
+description: Comparte observaciones, ideas, rutas o problemas dentro del ciclo SEFORIS.
+title: "[SEFORIS] - "
+labels: [feedback, seforis-cycle]
+assignees:
+  - Thrumanshow
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por ser parte del ciclo SEFORIS.  
+        Por favor, completa este formato para ayudarnos a mantener una ruta clara y colaborativa.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 🔍 Contexto o situación observada
+      description: Describe brevemente el entorno, acción o experiencia dentro del repositorio.
+      placeholder: "Estaba explorando la estructura del repo cuando noté que..."
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 💡 Propuesta o idea
+      description: ¿Qué sugieres? ¿Qué ruta se podría seguir?
+      placeholder: "Tal vez podríamos enlazar directamente con Notion para documentar los cambios..."
+
+  - type: dropdown
+    id: prioridad
+    attributes:
+      label: ⏱️ Prioridad
+      options:
+        - Alta (impacto directo)
+        - Media (mejora gradual)
+        - Baja (solo sugerencia)
+
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: ✅ Confirmación
+      options:
+        - label: Confirmo que he revisado los archivos antes de proponer cambios
